@@ -27,7 +27,7 @@ public class ProductWebService {
         }
 
         @PostMapping("/saveproduct")
-        public Product saveProduct(long id_user,long id_categ, Product product){
+        public Product saveProduct(@PathVariable("iduser") Long id_user, @PathVariable("idcateg") Long id_categ, @RequestBody Product product){
             return productService.saveProduct(id_user,id_categ,product);
         }
 

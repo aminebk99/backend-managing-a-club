@@ -1,7 +1,6 @@
 package com.example.websiteclubbackend.User.user;
 
 import com.example.websiteclubbackend.Product.product.Product;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,7 +19,7 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id_user;
+    private Long id_user;
     private String firstname;
     private String lastname;
     private String email;

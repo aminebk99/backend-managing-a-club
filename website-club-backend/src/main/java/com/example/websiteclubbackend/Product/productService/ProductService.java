@@ -28,7 +28,7 @@ public class ProductService {
     public List<Product> getAllProduct(){
         return productRepo.findAll();
     }
-    public Product saveProduct(long id_user,long id_categ, Product product){
+    public Product saveProduct(Long id_user,Long id_categ, Product product){
         Optional<User> user = userService.getUserById(id_user);
         Optional<Category> category = categoryService.getCategId(id_categ);
         if (user.isPresent() && category.isPresent()){

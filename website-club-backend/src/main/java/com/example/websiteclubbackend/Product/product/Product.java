@@ -3,6 +3,7 @@ package com.example.websiteclubbackend.Product.product;
 
 import com.example.websiteclubbackend.Category.category.Category;
 import com.example.websiteclubbackend.User.user.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,10 +29,12 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "id_user")
+    @JsonIgnore
     private User user;
 
     @ManyToOne
     @JoinColumn(name = "id_categ")
+    @JsonIgnore
     private Category category;
 
 
